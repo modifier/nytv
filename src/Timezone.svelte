@@ -8,12 +8,10 @@
 
     let timeString = getTime();
 
-    const regex = /.+, (\d+:\d+)/;
-
     function getTime() {
         const date = new Date();
 
-        return date.toLocaleString('ru-RU', { timeZone: timezone }).match(regex)[1];
+        return date.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit', timeZone: timezone });
     }
 
     function selectTimezone() {
@@ -31,7 +29,7 @@
     });
 </script>
 
-<div class="timezone" on:click={selectTimezone} class:timezoneSelected={$nytvStore.selectedTimezone === offset}>
+<div class="timezone" on:click={selectTimezone} class:timezone--selected={$nytvStore.selectedTimezone === offset}>
     <h3>UTC{offset}</h3>
     <p>{timeString}</p>
 </div>
@@ -45,7 +43,7 @@
         padding: 0.2em;
     }
 
-    .timezoneSelected {
+    .timezone--selected {
         background-color: mintcream;
     }
 

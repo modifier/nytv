@@ -7,7 +7,7 @@
 
 <div class="timezones">
 {#each timezones as timezone}
-    <Timezone timezone={timezone.timezone} offset={timezone.offset}/>
+    <Timezone timezone={timezone.timezoneName} offset={timezone.offset}/>
 {/each}
 </div>
 
