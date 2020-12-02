@@ -1,8 +1,10 @@
 <script>
     import { onMount } from 'svelte';
+    import { nytvStore } from './store.js';
 
     export let timezone;
     export let offset;
+    export let isActive;
 
     let timeString = getTime();
 
@@ -12,6 +14,10 @@
         const date = new Date();
 
         return date.toLocaleString('ru-RU', { timeZone: timezone }).match(regex)[1];
+    }
+
+    function selectTimezone() {
+        nytvStore.setTimezone(offset);
     }
 
     onMount(() => {
@@ -25,7 +31,7 @@
     });
 </script>
 
-<div class="timezone">
+<div class="timezone" on:click={selectTimezone} class:timezoneSelected={$nytvStore.selectedTimezone === offset}>
     <h3>UTC{offset}</h3>
     <p>{timeString}</p>
 </div>
@@ -37,6 +43,10 @@
         text-align: center;
         cursor: pointer;
         padding: 0.2em;
+    }
+
+    .timezoneSelected {
+        background-color: mintcream;
     }
 
     .timezone:hover {
