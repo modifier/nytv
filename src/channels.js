@@ -15,20 +15,24 @@ const channels = [
     }
 ];
 
-function getAllTimezones() {
-    const timezones = new Map();
-    for (let { timezoneName } of channels) {
-        const timezone = ct.getTimezone(timezoneName);
-        if ('dstOffsetStr' in timezone) {
-            timezones.set(timezone.dstOffsetStr, timezoneName);
-        } else {
-            timezones.set(timezone.utcOffsetStr, timezoneName);
-        }
+function getChannelsByTimezoneOffsets() {
+    const channelsByTimezones = {};
+    for (let channel of channels) {
+        const timezone = ct.getTimezone(channel.timezoneName);
+        const offset = 'dstOffsetStr' in timezone ? timezone.dstOffsetStr : timezone.utcOffsetStr;
+
+        channelsByTimezones[offset] = [...channelsByTimezones[offset] || [], channel];
     }
 
-    return [...timezones.entries()]
+    return channelsByTimezones;
+}
+
+export const channelsByTimezoneOffsets = getChannelsByTimezoneOffsets();
+
+function getAllTimezones() {
+    return [...Object.entries(channelsByTimezoneOffsets)]
         .sort(([a, _1], [b, _2]) => (a > b))
-        .map(([offset, timezoneName]) => ({timezoneName, offset}));
+        .map(([offset, channels]) => ({timezoneName: channels[0].timezoneName, offset}));
 }
 
 export const allTimezones = getAllTimezones();
