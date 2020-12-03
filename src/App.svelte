@@ -1,6 +1,7 @@
 <script>
-    import Timezones from './Timezones.svelte';
-    import Channels from './Channels.svelte';
+	import Timezones from './Timezones.svelte';
+	import Channels from './Channels.svelte';
+	import Tv from './Tv.svelte';
 </script>
 
 <main>
@@ -10,7 +11,9 @@
 	<aside class="channels">
 		<Channels/>
     </aside>
-	<section class="tv"></section>
+	<section class="tv">
+		<Tv/>
+	</section>
 </main>
 
 <style>

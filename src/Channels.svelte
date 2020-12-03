@@ -1,7 +1,7 @@
 <script>
     import { onDestroy } from 'svelte';
     import { nytvStore } from './store.js';
-    import {channelsByTimezoneOffsets} from './channels';
+    import { channelsByTimezoneOffsets } from './channels';
 
     let channels;
 

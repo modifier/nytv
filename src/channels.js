@@ -1,6 +1,6 @@
 import ct from 'countries-and-timezones';
 
-const channels = [
+export const channels = [
     {
         timezoneName: 'Europe/Dublin',
         title: 'Дублин',
@@ -17,11 +17,12 @@ const channels = [
 
 function getChannelsByTimezoneOffsets() {
     const channelsByTimezones = {};
-    for (let channel of channels) {
+    for (let id = 0; id < channels.length; id++) {
+        const channel = channels[id];
         const timezone = ct.getTimezone(channel.timezoneName);
         const offset = 'dstOffsetStr' in timezone ? timezone.dstOffsetStr : timezone.utcOffsetStr;
 
-        channelsByTimezones[offset] = [...channelsByTimezones[offset] || [], channel];
+        channelsByTimezones[offset] = [...channelsByTimezones[offset] || [], {...channel, id}];
     }
 
     return channelsByTimezones;

@@ -1,10 +1,11 @@
 import { writable } from 'svelte/store';
-import { allTimezones } from "./channels";
+import { allTimezones, channelsByTimezoneOffsets } from './channels';
 
 function createNyTvStore() {
+    let defaultTimezone = allTimezones[0].offset;
     const { subscribe, update } = writable({
-        selectedTimezone: allTimezones[0].offset,
-        selectedChannel: null,
+        selectedTimezone: defaultTimezone,
+        selectedChannel: channelsByTimezoneOffsets[defaultTimezone][0].id,
         autoselect: false
     });
 
@@ -13,6 +14,10 @@ function createNyTvStore() {
         setTimezone: (timezone) => update(state => ({
             ...state,
             selectedTimezone: timezone,
+        })),
+        setChannel: (channelId) => update(state => ({
+            ...state,
+            selectedChannel: channelId,
         })),
     };
 }
