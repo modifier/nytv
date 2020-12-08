@@ -43,13 +43,15 @@
         padding: 0.2em;
     }
 
-    .timezone--selected {
-        background-color: mintcream;
-    }
-
     .timezone:hover {
         background: #f4f4f4;
         transition: 0.2s background-color;
+    }
+
+    .timezone--selected,
+    .timezone--selected:hover {
+        background-color: mintcream;
+        cursor: default;
     }
 
     h3 {

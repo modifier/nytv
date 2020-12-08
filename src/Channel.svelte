@@ -1,11 +1,19 @@
 <script>
+    import { nytvStore } from './store.js';
+
     export let channel;
+    export let id;
 
     let flagClass;
+
+    function selectChannel() {
+        nytvStore.setChannel(id);
+    }
+
     $: flagClass = 'channel__lang em em-flag-' + channel.lang;
 </script>
 
-<div class="channel">
+<div class="channel" class:channel--selected={$nytvStore.selectedChannel === id} on:click={selectChannel}>
     <i class={flagClass}></i> <span class="channel__name">{ channel.title }</span>
 </div>
 
@@ -17,6 +25,12 @@
 
     .channel:hover {
         background: #f4f4f4;
+    }
+
+    .channel--selected,
+    .channel--selected:hover {
+        background-color: mintcream;
+        cursor: default;
     }
 
     .channel__lang {

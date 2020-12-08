@@ -11,7 +11,7 @@ export const channels = [
         timezoneName: 'Europe/London',
         title: 'Лондон',
         lang: 'gb',
-        url: 'https://www.youtube.com/watch?v=9Auq9mYxFEE'
+        url: 'https://www.youtube.com/embed/9Auq9mYxFEE'
     },
     {
         timezoneName: 'Asia/Seoul',
