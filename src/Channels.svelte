@@ -2,6 +2,7 @@
     import { onDestroy } from 'svelte';
     import { nytvStore } from './store.js';
     import { channelsByTimezoneOffsets } from './channels';
+    import Channel from './Channel.svelte';
 
     let channels;
 
@@ -12,6 +13,6 @@
     onDestroy(unsubscribe);
 </script>
 
-{#each channels as channel}
-    {channel.title}
+{#each channels as channel, id}
+    <Channel {channel} {id} />
 {/each}

@@ -4,13 +4,19 @@ export const channels = [
     {
         timezoneName: 'Europe/Dublin',
         title: 'Дублин',
-        lang: 'en',
+        lang: 'gb',
         url: 'https://www.rte.ie/player/onnow'
+    },
+    {
+        timezoneName: 'Europe/London',
+        title: 'Лондон',
+        lang: 'gb',
+        url: 'https://www.youtube.com/watch?v=9Auq9mYxFEE'
     },
     {
         timezoneName: 'Asia/Seoul',
         title: 'Сеул',
-        lang: 'en',
+        lang: 'kr',
         url: 'https://www.youtube.com/watch?v=4gwqZYZ-OSw'
     }
 ];

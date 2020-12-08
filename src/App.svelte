@@ -37,7 +37,6 @@
 
 	.channels {
 		flex: 0 0 10em;
-		padding-left: 1em;
 		box-sizing: border-box;
 	}
 
@@ -45,3 +44,4 @@
 		flex: 1 0 auto;
 	}
 </style>
+<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
