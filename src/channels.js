@@ -17,8 +17,62 @@ export const channels = [
         timezoneName: 'Asia/Seoul',
         title: 'Сеул',
         lang: 'kr',
-        url: 'https://www.youtube.com/watch?v=4gwqZYZ-OSw'
-    }
+        url: 'https://www.youtube.com/embed/4gwqZYZ-OSw'
+    },
+    {
+        timezoneName: 'Pacific/Fiji',
+        title: 'Фиджи',
+        lang: 'fj',
+        url: 'https://www.fijione.tv/live-tv/'
+    },
+    {
+        timezoneName: 'Pacific/Auckland',
+        title: 'Окланд',
+        lang: 'nz',
+        url: 'https://ondemand.parliament.nz'
+    },
+    {
+        timezoneName: 'Pacific/Guam',
+        title: 'Гуам',
+        lang: 'gu',
+        url: 'https://livestream.com/pncnews/newstalk57'
+    },
+    {
+        timezoneName: 'Australia/Sydney',
+        title: 'Сидней',
+        lang: 'au',
+        url: 'https://www.youtube.com/embed/W1ilCy6XrmI'
+    },
+    {
+        timezoneName: 'Asia/Tokyo',
+        title: 'Токио',
+        lang: 'jp',
+        url: 'https://www3.nhk.or.jp/nhkworld/common/player/tv/live/embed/embed.html'
+    },
+    {
+        timezoneName: 'Asia/Taipei',
+        title: 'Тайпей',
+        lang: 'tw',
+        url: 'https://www.youtube.com/embed/XxJKnDLYZz4'
+    },
+    {
+        timezoneName: 'Asia/Shanghai',
+        title: 'Пекин',
+        lang: 'cn',
+        url: 'https://www.cgtn.com/tv'
+    },
+    {
+        timezoneName: 'Asia/Dhaka',
+        title: 'Дхака',
+        lang: 'bd',
+        url: 'https://www.tvoneuk.tv'
+    },
+    {
+        timezoneName: 'Indian/Maldives',
+        title: 'Мальдивы',
+        lang: 'mv',
+        url: 'https://maldivestv.mv'
+    },
 ];
 
 function getChannelsByTimezoneOffsets() {
@@ -38,8 +92,8 @@ export const channelsByTimezoneOffsets = getChannelsByTimezoneOffsets();
 
 function getAllTimezones() {
     return [...Object.entries(channelsByTimezoneOffsets)]
-        .sort(([a, _1], [b, _2]) => (a > b))
-        .map(([offset, channels]) => ({timezoneName: channels[0].timezoneName, offset}));
+        .map(([offset, channels]) => ({timezoneName: channels[0].timezoneName, offset}))
+        .sort((a, b) => (a.offset > b.offset ? 1 : -1));
 }
 
 export const allTimezones = getAllTimezones();

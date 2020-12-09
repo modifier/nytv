@@ -13,6 +13,6 @@
     onDestroy(unsubscribe);
 </script>
 
-{#each channels as channel, id}
-    <Channel {channel} {id} />
+{#each channels as channel}
+    <Channel {channel} />
 {/each}

@@ -2,18 +2,17 @@
     import { nytvStore } from './store.js';
 
     export let channel;
-    export let id;
 
     let flagClass;
 
     function selectChannel() {
-        nytvStore.setChannel(id);
+        nytvStore.setChannel(channel.id);
     }
 
     $: flagClass = 'channel__lang em em-flag-' + channel.lang;
 </script>
 
-<div class="channel" class:channel--selected={$nytvStore.selectedChannel === id} on:click={selectChannel}>
+<div class="channel" class:channel--selected={$nytvStore.selectedChannel === channel.id} on:click={selectChannel}>
     <i class={flagClass}></i> <span class="channel__name">{ channel.title }</span>
 </div>
 
