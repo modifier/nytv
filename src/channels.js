@@ -73,6 +73,84 @@ export const channels = [
         lang: 'mv',
         url: 'https://maldivestv.mv'
     },
+    {
+        timezoneName: 'Asia/Karachi',
+        title: 'Indus News',
+        lang: 'pk',
+        url: 'https://www.youtube.com/embed/D9KHbHipoJ4'
+    },
+    {
+        timezoneName: 'Asia/Karachi',
+        title: 'ARY',
+        lang: 'pk',
+        url: 'https://live.arydigital.tv'
+    },
+    {
+        timezoneName: 'Asia/Tashkent',
+        title: 'Uzreport TV',
+        lang: 'uz',
+        url: 'https://uzreport.news/live'
+    },
+    {
+        timezoneName: 'Asia/Dubai',
+        title: 'Al Arabiya',
+        lang: 'ae',
+        url: 'https://www.youtube.com/embed/_M7Kcs8el-Q'
+    },
+    {
+        timezoneName: 'Asia/Dubai',
+        title: 'Dubai One',
+        lang: 'ae',
+        url: 'https://www.awaan.ae/live/10/One-Tv'
+    },
+    {
+        timezoneName: 'Europe/Istanbul',
+        title: 'TRT World',
+        lang: 'tr',
+        url: 'https://www.youtube.com/embed/CV5Fooi8YJA'
+    },
+    {
+        timezoneName: 'Europe/Moscow',
+        title: 'Russia 1',
+        lang: 'ru',
+        url: 'https://m.russia.tv'
+    },
+    {
+        timezoneName: 'Europe/Moscow',
+        title: 'Belarus 24',
+        lang: 'by',
+        url: 'https://belarus24.by'
+    },
+    {
+        timezoneName: 'Africa/Nairobi',
+        title: 'Universal TV',
+        lang: 'so',
+        url: 'https://www.universaltvsomali.net/home'
+    },
+    {
+        timezoneName: 'Africa/Nairobi',
+        title: 'KTN News',
+        lang: 'ke',
+        url: 'https://www.youtube.com/embed/zl7Ppm2fJMw'
+    },
+    {
+        timezoneName: 'Europe/Bucharest',
+        title: 'TBR',
+        lang: 'ro',
+        url: 'https://www.tvrplus.ro'
+    },
+    {
+        timezoneName: 'Africa/Johannesburg',
+        title: 'CNBC',
+        lang: 'za',
+        url: 'https://www.youtube.com/embed/CV5Fooi8YJA'
+    },
+    {
+        timezoneName: 'Africa/Johannesburg',
+        title: 'Gqama TV',
+        lang: 'za',
+        url: 'http://www.gqama.tv/live.php'
+    },
 ];
 
 function getChannelsByTimezoneOffsets() {
