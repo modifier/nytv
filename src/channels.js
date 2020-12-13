@@ -4,30 +4,30 @@ export const channels = [
     {
         timezoneName: 'Europe/Dublin',
         title: 'Дублин',
-        lang: 'gb',
+        lang: 'ie',
         url: 'https://www.rte.ie/player/onnow'
     },
     {
         timezoneName: 'Europe/London',
-        title: 'Лондон',
+        title: 'Sky News',
         lang: 'gb',
         url: 'https://www.youtube.com/embed/9Auq9mYxFEE'
     },
     {
         timezoneName: 'Asia/Seoul',
-        title: 'Сеул',
+        title: 'KBS',
         lang: 'kr',
         url: 'https://www.youtube.com/embed/4gwqZYZ-OSw'
     },
     {
         timezoneName: 'Pacific/Fiji',
-        title: 'Фиджи',
+        title: 'Fiji TV',
         lang: 'fj',
         url: 'https://www.fijione.tv/live-tv/'
     },
     {
         timezoneName: 'Pacific/Auckland',
-        title: 'Окланд',
+        title: 'Parliament',
         lang: 'nz',
         url: 'https://ondemand.parliament.nz'
     },
@@ -39,37 +39,37 @@ export const channels = [
     },
     {
         timezoneName: 'Australia/Sydney',
-        title: 'Сидней',
+        title: 'ABC News',
         lang: 'au',
         url: 'https://www.youtube.com/embed/W1ilCy6XrmI'
     },
     {
         timezoneName: 'Asia/Tokyo',
-        title: 'Токио',
+        title: 'NHK World',
         lang: 'jp',
         url: 'https://www3.nhk.or.jp/nhkworld/common/player/tv/live/embed/embed.html'
     },
     {
         timezoneName: 'Asia/Taipei',
-        title: 'Тайпей',
+        title: 'FTVN',
         lang: 'tw',
         url: 'https://www.youtube.com/embed/XxJKnDLYZz4'
     },
     {
         timezoneName: 'Asia/Shanghai',
-        title: 'Пекин',
+        title: 'CGTN',
         lang: 'cn',
         url: 'https://www.cgtn.com/tv'
     },
     {
         timezoneName: 'Asia/Dhaka',
-        title: 'Дхака',
+        title: 'TV One',
         lang: 'bd',
         url: 'https://www.tvoneuk.tv'
     },
     {
         timezoneName: 'Indian/Maldives',
-        title: 'Мальдивы',
+        title: 'Maldives TV',
         lang: 'mv',
         url: 'https://maldivestv.mv'
     },
@@ -151,6 +151,30 @@ export const channels = [
         lang: 'za',
         url: 'http://www.gqama.tv/live.php'
     },
+    {
+        timezoneName: 'Africa/Cairo',
+        title: 'Alghad TV',
+        lang: 'eg',
+        url: 'https://www.youtube.com/embed/s_lfbFjs_Yw'
+    },
+    {
+        timezoneName: 'Europe/Stockholm',
+        title: 'Expressen TV',
+        lang: 'se',
+        url: 'https://www.squidtv.net/europe/sweden/sweden-013.html'
+    },
+    {
+        timezoneName: 'Atlantic/Reykjavik',
+        title: 'RUV',
+        lang: 'is',
+        url: 'https://www.ruv.is/ruv'
+    },
+    {
+        timezoneName: 'Atlantic/Cape_Verde',
+        title: 'RTP Africa',
+        lang: 'cv',
+        url: 'https://www.rtp.pt/play/direto/rtpafrica'
+    },
 ];
 
 function getChannelsByTimezoneOffsets() {
@@ -168,10 +192,17 @@ function getChannelsByTimezoneOffsets() {
 
 export const channelsByTimezoneOffsets = getChannelsByTimezoneOffsets();
 
+const timezoneReg = /([-+]\d+):(\d+)/;
+
 function getAllTimezones() {
     return [...Object.entries(channelsByTimezoneOffsets)]
         .map(([offset, channels]) => ({timezoneName: channels[0].timezoneName, offset}))
-        .sort((a, b) => (a.offset > b.offset ? 1 : -1));
+        .sort((a, b) => {
+            const [_a, signedValueA] = a.offset.match(timezoneReg);
+            const [_b, signedValueB] = b.offset.match(timezoneReg);
+
+            return (parseInt(signedValueA, 10) > parseInt(signedValueB, 10) ? 1 : -1);
+        });
 }
 
 export const allTimezones = getAllTimezones();
