@@ -23,7 +23,7 @@ export const channels = [
         timezoneName: 'Pacific/Fiji',
         title: 'Fiji TV',
         lang: 'fj',
-        url: 'https://www.fijione.tv/live-tv/'
+        url: 'https://livestream.com/accounts/19514369/events/6947821/player?enableInfoAndActivity=true&defaultDrawer&autoPlay=true&mute=false'
     },
     {
         timezoneName: 'Pacific/Auckland',

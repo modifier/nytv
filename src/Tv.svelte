@@ -13,7 +13,8 @@
 </script>
 
 <div class="tv">
-    <iframe src={selectedTv.url} class="tv-frame"></iframe>
+    <video autoplay controls disableremoteplayback src="blob:https://ondemand.parliament.nz/0c604cfd-63ed-450b-9e5f-94a8edd0c75e"></video>
+<!--    <iframe src={selectedTv.url} class="tv-frame"></iframe>-->
 </div>
 
 <style>
