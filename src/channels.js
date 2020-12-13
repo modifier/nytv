@@ -35,7 +35,7 @@ export const channels = [
         timezoneName: 'Pacific/Guam',
         title: 'Гуам',
         lang: 'gu',
-        url: 'https://livestream.com/pncnews/newstalk57'
+        url: 'https://livestream.com/accounts/10612724/events/8102121/player?enableInfoAndActivity=true&defaultDrawer=&autoPlay=true'
     },
     {
         timezoneName: 'Australia/Sydney',
@@ -59,7 +59,8 @@ export const channels = [
         timezoneName: 'Asia/Shanghai',
         title: 'CGTN',
         lang: 'cn',
-        url: 'https://www.cgtn.com/tv'
+        url: 'https://www.cgtn.com/tv',
+        video: 'https://news.cgtn.com/resource/live/english/cgtn-news.m3u8'
     },
     {
         timezoneName: 'Asia/Dhaka',

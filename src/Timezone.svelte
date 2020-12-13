@@ -4,7 +4,6 @@
 
     export let timezone;
     export let offset;
-    export let isActive;
 
     let timeString = getTime();
 

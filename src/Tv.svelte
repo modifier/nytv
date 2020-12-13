@@ -2,6 +2,7 @@
     import { onDestroy } from 'svelte';
     import { nytvStore } from './store.js';
     import { channels } from './channels.js';
+    import VideoTv from './VideoTv.svelte';
 
     let selectedTv;
 
@@ -13,8 +14,11 @@
 </script>
 
 <div class="tv">
-    <video autoplay controls disableremoteplayback src="blob:https://ondemand.parliament.nz/0c604cfd-63ed-450b-9e5f-94a8edd0c75e"></video>
-<!--    <iframe src={selectedTv.url} class="tv-frame"></iframe>-->
+    {#if 'video' in selectedTv}
+    <VideoTv {selectedTv} />
+    {:else}
+    <iframe src={selectedTv.url} class="tv-frame"></iframe>
+    {/if}
 </div>
 
 <style>
