@@ -3,9 +3,10 @@ import ct from 'countries-and-timezones';
 export const channels = [
     {
         timezoneName: 'Europe/Dublin',
-        title: 'Дублин',
+        title: 'TG4',
         lang: 'ie',
-        url: 'https://www.rte.ie/player/onnow'
+        url: 'https://www.tg4.ie/en/player/watch-live/home/',
+        video: 'https://csm-e-tg4ie.tls1.yospace.com/csm/live/195340990.m3u8'
     },
     {
         timezoneName: 'Europe/London',

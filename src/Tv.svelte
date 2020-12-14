@@ -15,9 +15,11 @@
 
 <div class="tv">
     {#if 'video' in selectedTv}
-    <VideoTv {selectedTv} />
+        {#key selectedTv.video}
+            <VideoTv {selectedTv} />
+        {/key}
     {:else}
-    <iframe src={selectedTv.url} class="tv-frame"></iframe>
+    <iframe src={selectedTv.url} class="tv-frame" title={selectedTv.title}></iframe>
     {/if}
 </div>
 
