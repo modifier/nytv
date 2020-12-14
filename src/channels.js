@@ -12,13 +12,13 @@ export const channels = [
         timezoneName: 'Europe/London',
         title: 'Sky News',
         lang: 'gb',
-        url: 'https://www.youtube.com/embed/9Auq9mYxFEE'
+        url: 'https://www.youtube.com/embed/9Auq9mYxFEE?autoplay=1'
     },
     {
         timezoneName: 'Asia/Seoul',
         title: 'KBS',
         lang: 'kr',
-        url: 'https://www.youtube.com/embed/4gwqZYZ-OSw'
+        url: 'https://www.youtube.com/embed/4gwqZYZ-OSw?autoplay=1'
     },
     {
         timezoneName: 'Pacific/Fiji',
@@ -30,7 +30,8 @@ export const channels = [
         timezoneName: 'Pacific/Auckland',
         title: 'Parliament',
         lang: 'nz',
-        url: 'https://ondemand.parliament.nz'
+        url: 'https://ondemand.parliament.nz',
+        video: 'https://ptvlive.kordia.net.nz/out/v1/daf20b9a9ec5449dadd734e50ce52b74/index.m3u8'
     },
     {
         timezoneName: 'Pacific/Guam',
@@ -42,7 +43,7 @@ export const channels = [
         timezoneName: 'Australia/Sydney',
         title: 'ABC News',
         lang: 'au',
-        url: 'https://www.youtube.com/embed/W1ilCy6XrmI'
+        url: 'https://www.youtube.com/embed/W1ilCy6XrmI?autoplay=1'
     },
     {
         timezoneName: 'Asia/Tokyo',
@@ -54,7 +55,7 @@ export const channels = [
         timezoneName: 'Asia/Taipei',
         title: 'FTVN',
         lang: 'tw',
-        url: 'https://www.youtube.com/embed/XxJKnDLYZz4'
+        url: 'https://www.youtube.com/embed/XxJKnDLYZz4?autoplay=1'
     },
     {
         timezoneName: 'Asia/Shanghai',
@@ -67,61 +68,68 @@ export const channels = [
         timezoneName: 'Asia/Dhaka',
         title: 'TV One',
         lang: 'bd',
-        url: 'https://www.tvoneuk.tv'
+        url: 'https://www.tvoneuk.tv',
+        video: 'https://cdn.appv.jagobd.com:444/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/tvoneuksni.stream/playlist.m3u8'
     },
     {
         timezoneName: 'Indian/Maldives',
         title: 'Maldives TV',
         lang: 'mv',
-        url: 'https://maldivestv.mv'
+        url: 'https://maldivestv.mv',
+        video: 'https://58bdd3c8ef31c.streamlock.net/live/smil:maldivestv.smil/playlist.m3u8'
     },
     {
         timezoneName: 'Asia/Karachi',
         title: 'Indus News',
         lang: 'pk',
-        url: 'https://www.youtube.com/embed/D9KHbHipoJ4'
+        url: 'https://www.youtube.com/embed/D9KHbHipoJ4?autoplay=1'
     },
     {
         timezoneName: 'Asia/Karachi',
         title: 'ARY',
         lang: 'pk',
-        url: 'https://live.arydigital.tv'
+        url: 'https://live.arydigital.tv',
+        video: 'https://6zklx4wryw9b-hls-live.5centscdn.com/arydigital/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8'
     },
     {
         timezoneName: 'Asia/Tashkent',
         title: 'Uzreport TV',
         lang: 'uz',
-        url: 'https://uzreport.news/live'
+        url: 'https://uzreport.news/live',
+        video: 'https://vspnmy3kvpzu7q.data.mediastore.eu-central-1.amazonaws.com/live.m3u8'
     },
     {
         timezoneName: 'Asia/Dubai',
         title: 'Al Arabiya',
         lang: 'ae',
-        url: 'https://www.youtube.com/embed/_M7Kcs8el-Q'
+        url: 'https://www.youtube.com/embed/_M7Kcs8el-Q?autoplay=1'
     },
     {
         timezoneName: 'Asia/Dubai',
         title: 'Dubai One',
         lang: 'ae',
-        url: 'https://www.awaan.ae/live/10/One-Tv'
+        url: 'https://www.awaan.ae/live/10/One-Tv',
+        video: 'https://dminnvll.cdn.mangomolo.com/dubaione/smil:dubaione.stream.smil/playlist.m3u8'
     },
     {
         timezoneName: 'Europe/Istanbul',
         title: 'TRT World',
         lang: 'tr',
-        url: 'https://www.youtube.com/embed/CV5Fooi8YJA'
+        url: 'https://www.youtube.com/embed/CV5Fooi8YJA?autoplay=1'
     },
     {
         timezoneName: 'Europe/Moscow',
         title: 'Russia 1',
         lang: 'ru',
-        url: 'https://m.russia.tv'
+        url: 'https://m.russia.tv',
+        video: 'https://livehlsvgtrk2.cdnvideo.ru/hls/russia_hd/playlist.m3u8?md5=nXwirOHMUB3fVAEowtYmNg'
     },
     {
         timezoneName: 'Europe/Moscow',
         title: 'Belarus 24',
         lang: 'by',
-        url: 'https://belarus24.by'
+        url: 'https://belarus24.by',
+        video: 'https://stream.hoster.by/belarus24hd/livehd/playlist.m3u8'
     },
     {
         timezoneName: 'Africa/Nairobi',
@@ -133,19 +141,20 @@ export const channels = [
         timezoneName: 'Africa/Nairobi',
         title: 'KTN News',
         lang: 'ke',
-        url: 'https://www.youtube.com/embed/zl7Ppm2fJMw'
+        url: 'https://www.youtube.com/embed/zl7Ppm2fJMw?autoplay=1'
     },
     {
         timezoneName: 'Europe/Bucharest',
         title: 'TBR',
         lang: 'ro',
-        url: 'https://www.tvrplus.ro'
+        url: 'https://www.tvrplus.ro',
+        video: 'https://mn-nl.mncdn.com/tvr1_hd_live/smil:tvr1_hd_live.smil/index.m3u8'
     },
     {
         timezoneName: 'Africa/Johannesburg',
         title: 'CNBC',
         lang: 'za',
-        url: 'https://www.youtube.com/embed/CV5Fooi8YJA'
+        url: 'https://www.youtube.com/embed/CV5Fooi8YJA?autoplay=1'
     },
     {
         timezoneName: 'Africa/Johannesburg',
@@ -157,25 +166,28 @@ export const channels = [
         timezoneName: 'Africa/Cairo',
         title: 'Alghad TV',
         lang: 'eg',
-        url: 'https://www.youtube.com/embed/s_lfbFjs_Yw'
+        url: 'https://www.youtube.com/embed/s_lfbFjs_Yw?autoplay=1'
     },
     {
         timezoneName: 'Europe/Stockholm',
         title: 'Expressen TV',
         lang: 'se',
-        url: 'https://www.squidtv.net/europe/sweden/sweden-013.html'
+        url: 'https://www.squidtv.net/europe/sweden/sweden-013.html',
+        video: 'https://httpcache0-03837-cachelive2.dna.ip-only.net/03837-cachelive2/smil:03837_tx2_720p/playlist.m3u8'
     },
     {
         timezoneName: 'Atlantic/Reykjavik',
         title: 'RUV',
         lang: 'is',
-        url: 'https://www.ruv.is/ruv'
+        url: 'https://www.ruv.is/ruv',
+        video: 'https://ruvruverl-live-hls.secure.footprint.net/2d4ff135084b046167dd4941f8a3333b8579db5b-1607976271/ruv/ruverl/index.m3u8'
     },
     {
         timezoneName: 'Atlantic/Cape_Verde',
         title: 'RTP Africa',
         lang: 'cv',
-        url: 'https://www.rtp.pt/play/direto/rtpafrica'
+        url: 'https://www.rtp.pt/play/direto/rtpafrica',
+        video: 'https://streaming-live.rtp.pt/liverepeater/smil:rtpafrica.smil/playlist.m3u8?pxt_rtp'
     },
 ];
 
