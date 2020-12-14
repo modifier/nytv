@@ -176,20 +176,20 @@ export const channels = [
         url: 'https://www.squidtv.net/europe/sweden/sweden-013.html',
         video: 'https://httpcache0-03837-cachelive2.dna.ip-only.net/03837-cachelive2/smil:03837_tx2_720p/playlist.m3u8'
     },
-    {
-        timezoneName: 'Atlantic/Reykjavik',
-        title: 'RUV',
-        lang: 'is',
-        url: 'https://www.ruv.is/ruv',
-        video: 'https://ruvruverl-live-hls.secure.footprint.net/2d4ff135084b046167dd4941f8a3333b8579db5b-1607976271/ruv/ruverl/index.m3u8'
-    },
-    {
-        timezoneName: 'Atlantic/Cape_Verde',
-        title: 'RTP Africa',
-        lang: 'cv',
-        url: 'https://www.rtp.pt/play/direto/rtpafrica',
-        video: 'https://streaming-live.rtp.pt/liverepeater/smil:rtpafrica.smil/playlist.m3u8?pxt_rtp'
-    },
+    // {
+    //     timezoneName: 'Atlantic/Reykjavik',
+    //     title: 'RUV',
+    //     lang: 'is',
+    //     url: 'https://www.ruv.is/ruv',
+    //     video: 'https://ruvruverl-live-hls.secure.footprint.net/2d4ff135084b046167dd4941f8a3333b8579db5b-1607976271/ruv/ruverl/index.m3u8'
+    // },
+    // {
+    //     timezoneName: 'Atlantic/Cape_Verde',
+    //     title: 'RTP Africa',
+    //     lang: 'cv',
+    //     url: 'https://www.rtp.pt/play/direto/rtpafrica',
+    //     video: 'https://streaming-live.rtp.pt/liverepeater/smil:rtpafrica.smil/playlist.m3u8?pxt_rtp'
+    // },
 ];
 
 function getChannelsByTimezoneOffsets() {
