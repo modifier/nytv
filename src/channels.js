@@ -119,17 +119,16 @@ export const channels = [
     },
     {
         timezoneName: 'Europe/Moscow',
-        title: 'Russia 1',
+        title: 'Channel One',
         lang: 'ru',
-        url: 'https://m.russia.tv',
-        video: 'https://livehlsvgtrk2.cdnvideo.ru/hls/russia_hd/playlist.m3u8?md5=nXwirOHMUB3fVAEowtYmNg'
+        url: 'https://www.1tv.ru/iframed/embedlive.html'
     },
     {
         timezoneName: 'Europe/Moscow',
         title: 'Belarus 24',
         lang: 'by',
         url: 'https://belarus24.by',
-        video: 'https://stream.hoster.by/belarus24hd/livehd/playlist.m3u8'
+        video: 'https://stream.hoster.by/belarus24hd/livehd/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTQvMjAyMCA4OjA5OjM4IFBNJmhhc2hfdmFsdWU9T2VUOGtnc1NmMnc2cmt4VU5DWnJpUT09JnZhbGlkbWludXRlcz0xMjA='
     },
     {
         timezoneName: 'Africa/Nairobi',
@@ -138,12 +137,14 @@ export const channels = [
         url: 'https://www.universaltvsomali.net/home'
     },
     {
+        // Renews youtube linke every once in a while
         timezoneName: 'Africa/Nairobi',
         title: 'KTN News',
         lang: 'ke',
-        url: 'https://www.youtube.com/embed/zl7Ppm2fJMw?autoplay=1'
+        url: 'https://www.youtube.com/embed/O3Gib2QEipY?autoplay=1'
     },
     {
+        // No broadcasting in Russia
         timezoneName: 'Europe/Bucharest',
         title: 'TBR',
         lang: 'ro',
