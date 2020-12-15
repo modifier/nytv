@@ -1,7 +1,22 @@
 <script>
+	import { nytvStore } from './store.js';
 	import Timezones from './Timezones.svelte';
 	import Tv from './Tv.svelte';
+
+	function handleKeydown(event) {
+		switch (event.key) {
+			case 'ArrowUp':
+			case 'ArrowLeft':
+				nytvStore.prevChannel();
+
+			case 'ArrowDown':
+			case 'ArrowRight':
+				nytvStore.nextChannel();
+		}
+	}
 </script>
+
+<svelte:window on:keydown={handleKeydown}/>
 
 <main>
 	<div class="main-content">
@@ -38,4 +53,3 @@
 		flex: 1 0 auto;
 	}
 </style>
-<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">

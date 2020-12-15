@@ -1,5 +1,5 @@
 <script>
-    import { allTimezones } from './channels';
+    import { allTimezones } from './channelUtils';
     import Timezone from './Timezone.svelte';
 
     const timezones = allTimezones;

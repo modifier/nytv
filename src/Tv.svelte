@@ -1,13 +1,13 @@
 <script>
     import { onDestroy } from 'svelte';
     import { nytvStore } from './store.js';
-    import { channels } from './channels.js';
+    import { sortedChannels } from './channelUtils';
     import VideoTv from './VideoTv.svelte';
 
     let selectedTv;
 
     const unsubscribe = nytvStore.subscribe(state => {
-        selectedTv = channels[state.selectedChannel];
+        selectedTv = sortedChannels[state.selectedChannel];
     });
 
     onDestroy(unsubscribe);

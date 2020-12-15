@@ -1,6 +1,6 @@
 <script>
     import Channel from './Channel.svelte';
-    import { channelsByTimezoneOffsets } from './channels';
+    import { channelsByTimezoneOffsets } from './channelUtils';
 
     export let offset;
 

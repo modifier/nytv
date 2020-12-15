@@ -1,6 +1,4 @@
-import ct from 'countries-and-timezones';
-
-export const channels = [
+export default [
     {
         timezoneName: 'Europe/Dublin',
         title: 'TG4',
@@ -88,8 +86,7 @@ export const channels = [
         timezoneName: 'Asia/Karachi',
         title: 'ARY',
         lang: 'pk',
-        url: 'https://live.arydigital.tv',
-        // video: 'https://6zklx4wryw9b-hls-live.5centscdn.com/arydigital/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8'
+        url: 'https://live.arydigital.tv'
     },
     {
         timezoneName: 'Asia/Tashkent',
@@ -167,43 +164,4 @@ export const channels = [
         url: 'https://www.squidtv.net/europe/sweden/sweden-013.html',
         video: 'https://httpcache0-03837-cachelive2.dna.ip-only.net/03837-cachelive2/smil:03837_tx2_720p/playlist.m3u8'
     },
-    // {
-    //     timezoneName: 'Atlantic/Reykjavik',
-    //     title: 'RUV',
-    //     lang: 'is',
-    //     url: 'https://www.ruv.is/ruv',
-    //     video: 'https://ruvruverl-live-hls.secure.footprint.net/f09338c29abcf4b328fcd0f84668dfa88087d5b0-1608060550/ruv/ruverl/index.m3u8'
-    // },
 ];
-
-function getChannelsByTimezoneOffsets() {
-    const channelsByTimezones = {};
-    for (let id = 0; id < channels.length; id++) {
-        const channel = channels[id];
-        const timezone = ct.getTimezone(channel.timezoneName);
-        const offset = 'dstOffsetStr' in timezone ? timezone.dstOffsetStr : timezone.utcOffsetStr;
-
-        channelsByTimezones[offset] = [...channelsByTimezones[offset] || [], {...channel, id}];
-    }
-
-    return channelsByTimezones;
-}
-
-export const channelsByTimezoneOffsets = getChannelsByTimezoneOffsets();
-
-const timezoneReg = /([-+]\d+):(\d+)/;
-
-function getAllTimezones() {
-    return [...Object.entries(channelsByTimezoneOffsets)]
-        .map(([offset, channels]) => ({timezoneName: channels[0].timezoneName, offset}))
-        .sort((a, b) => {
-            const [_a, signedValueA] = a.offset.match(timezoneReg);
-            const [_b, signedValueB] = b.offset.match(timezoneReg);
-
-            return (parseInt(signedValueA, 10) > parseInt(signedValueB, 10) ? 1 : -1);
-        });
-}
-
-export const allTimezones = getAllTimezones();
-
-export default channels;
