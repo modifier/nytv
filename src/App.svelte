@@ -8,6 +8,7 @@
 			case 'ArrowUp':
 			case 'ArrowLeft':
 				nytvStore.prevChannel();
+				break;
 
 			case 'ArrowDown':
 			case 'ArrowRight':
