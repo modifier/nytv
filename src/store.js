@@ -3,7 +3,8 @@ import { sortedChannels, allTimezones } from './channelUtils';
 
 function createNyTvStore() {
     const { subscribe, update } = writable({
-        selectedChannel: parseInt(localStorage.getItem('selectedChannel'), 10) || 0
+        selectedChannel: parseInt(localStorage.getItem('selectedChannel'), 10) || 0,
+        needToScrollIntoView: true
     });
 
     return {
@@ -28,6 +29,7 @@ function createNyTvStore() {
             return ({
                 ...state,
                 selectedChannel: channelId,
+                needToScrollIntoView: true,
             });
         }),
         prevChannel: () => update(state => {
@@ -42,8 +44,13 @@ function createNyTvStore() {
             return ({
                 ...state,
                 selectedChannel: channelId,
+                needToScrollIntoView: true,
             });
-        })
+        }),
+        resetScrollIntoView: () => update(state => ({
+            ...state,
+            needToScrollIntoView: false,
+        }))
     };
 }
 
