@@ -89,7 +89,7 @@ export const channels = [
         title: 'ARY',
         lang: 'pk',
         url: 'https://live.arydigital.tv',
-        video: 'https://6zklx4wryw9b-hls-live.5centscdn.com/arydigital/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8'
+        // video: 'https://6zklx4wryw9b-hls-live.5centscdn.com/arydigital/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8'
     },
     {
         timezoneName: 'Asia/Tashkent',
@@ -125,10 +125,10 @@ export const channels = [
     },
     {
         timezoneName: 'Europe/Moscow',
-        title: 'Belarus 24',
+        title: 'BelRos',
         lang: 'by',
-        url: 'https://belarus24.by',
-        video: 'https://stream.hoster.by/belarus24hd/livehd/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMTQvMjAyMCA4OjA5OjM4IFBNJmhhc2hfdmFsdWU9T2VUOGtnc1NmMnc2cmt4VU5DWnJpUT09JnZhbGlkbWludXRlcz0xMjA='
+        url: 'https://belros.tv',
+        video: 'https://live3.mediacdn.ru/sr1/tro/playlist.m3u8'
     },
     {
         timezoneName: 'Africa/Nairobi',
@@ -137,25 +137,16 @@ export const channels = [
         url: 'https://www.universaltvsomali.net/home'
     },
     {
-        // Renews youtube linke every once in a while
         timezoneName: 'Africa/Nairobi',
         title: 'KTN News',
         lang: 'ke',
-        url: 'https://www.youtube.com/embed/O3Gib2QEipY?autoplay=1'
-    },
-    {
-        // No broadcasting in Russia
-        timezoneName: 'Europe/Bucharest',
-        title: 'TBR',
-        lang: 'ro',
-        url: 'https://www.tvrplus.ro',
-        video: 'https://mn-nl.mncdn.com/tvr1_hd_live/smil:tvr1_hd_live.smil/index.m3u8'
+        url: 'https://www.youtube.com/embed/live_stream?channel=UCKVsdeoHExltrWMuK0hOWmg&autoplay=1'
     },
     {
         timezoneName: 'Africa/Johannesburg',
         title: 'CNBC',
         lang: 'za',
-        url: 'https://www.youtube.com/embed/CV5Fooi8YJA?autoplay=1'
+        url: 'https://www.youtube.com/embed/live_stream?channel=UCsba91UGiQLFOb5DN3Z_AdQ&autoplay=1'
     },
     {
         timezoneName: 'Africa/Johannesburg',
@@ -181,14 +172,7 @@ export const channels = [
     //     title: 'RUV',
     //     lang: 'is',
     //     url: 'https://www.ruv.is/ruv',
-    //     video: 'https://ruvruverl-live-hls.secure.footprint.net/2d4ff135084b046167dd4941f8a3333b8579db5b-1607976271/ruv/ruverl/index.m3u8'
-    // },
-    // {
-    //     timezoneName: 'Atlantic/Cape_Verde',
-    //     title: 'RTP Africa',
-    //     lang: 'cv',
-    //     url: 'https://www.rtp.pt/play/direto/rtpafrica',
-    //     video: 'https://streaming-live.rtp.pt/liverepeater/smil:rtpafrica.smil/playlist.m3u8?pxt_rtp'
+    //     video: 'https://ruvruverl-live-hls.secure.footprint.net/f09338c29abcf4b328fcd0f84668dfa88087d5b0-1608060550/ruv/ruverl/index.m3u8'
     // },
 ];
 
