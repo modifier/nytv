@@ -1,16 +1,10 @@
 <script>
-    import { onDestroy } from 'svelte';
-    import { nytvStore } from './store.js';
-    import { channelsByTimezoneOffsets } from './channels';
     import Channel from './Channel.svelte';
+    import { channelsByTimezoneOffsets } from './channels';
 
-    let channels;
+    export let offset;
 
-    const unsubscribe = nytvStore.subscribe(state => {
-        channels = channelsByTimezoneOffsets[state.selectedTimezone];
-    });
-
-    onDestroy(unsubscribe);
+    let channels = channelsByTimezoneOffsets[offset];
 </script>
 
 {#each channels as channel}

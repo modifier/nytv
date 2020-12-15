@@ -18,7 +18,7 @@
 
 <style>
     .channel {
-        padding: 0.2em 1em;
+        padding: 0.4em 1em;
         cursor: pointer;
     }
 
@@ -28,7 +28,7 @@
 
     .channel--selected,
     .channel--selected:hover {
-        background-color: mintcream;
+        background-color: lightsteelblue;
         cursor: default;
     }
 

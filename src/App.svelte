@@ -1,16 +1,12 @@
 <script>
 	import Timezones from './Timezones.svelte';
-	import Channels from './Channels.svelte';
 	import Tv from './Tv.svelte';
 </script>
 
 <main>
-	<header class="header-timezones">
-		<Timezones/>
-	</header>
 	<div class="main-content">
 		<aside class="channels">
-			<Channels/>
+			<Timezones/>
 		</aside>
 		<section class="tv">
 			<Tv/>
@@ -26,18 +22,16 @@
 		flex-direction: column;
 	}
 
-	.header-timezones {
-		flex: 0 0 auto;
-	}
-
 	.main-content {
 		display: flex;
 		flex: 1 0 auto;
+		height: 100%;
 	}
 
 	.channels {
-		flex: 0 0 10em;
+		flex: 0 0 12em;
 		box-sizing: border-box;
+		height: 100%;
 	}
 
 	.tv {

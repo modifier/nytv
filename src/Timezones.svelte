@@ -14,5 +14,8 @@
 <style>
     .timezones {
         display: flex;
+        flex-direction: column;
+        overflow: auto;
+        height: 100%;
     }
 </style>

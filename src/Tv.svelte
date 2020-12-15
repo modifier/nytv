@@ -28,7 +28,6 @@
         height: 100%;
         width: 100%;
         background: black;
-        padding-left: 1em;
         box-sizing: border-box;
     }
 

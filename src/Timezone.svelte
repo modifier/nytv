@@ -1,6 +1,6 @@
 <script>
-    import { onMount } from 'svelte';
-    import { nytvStore } from './store.js';
+    import {onMount} from 'svelte';
+    import Channels from './Channels.svelte';
 
     export let timezone;
     export let offset;
@@ -10,11 +10,7 @@
     function getTime() {
         const date = new Date();
 
-        return date.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit', timeZone: timezone });
-    }
-
-    function selectTimezone() {
-        nytvStore.setTimezone(offset);
+        return date.toLocaleTimeString('ru-RU', {hour: '2-digit', minute: '2-digit', timeZone: timezone});
     }
 
     onMount(() => {
@@ -28,29 +24,24 @@
     });
 </script>
 
-<div class="timezone" on:click={selectTimezone} class:timezone--selected={$nytvStore.selectedTimezone === offset}>
-    <h3>UTC{offset}</h3>
-    <p>{timeString}</p>
+<div class="timezone">
+    <div class="timezone__header">
+        <h3>UTC{offset}</h3>
+        <p>{timeString}</p>
+    </div>
+
+    <Channels {offset} />
 </div>
 
 <style>
     .timezone {
         font-size: 14px;
-        flex: 0 0 7em;
+        padding: 0 0.3em 1em;
+    }
+
+    .timezone__header {
         text-align: center;
-        cursor: pointer;
-        padding: 0.2em;
-    }
-
-    .timezone:hover {
-        background: #f4f4f4;
-        transition: 0.2s background-color;
-    }
-
-    .timezone--selected,
-    .timezone--selected:hover {
-        background-color: mintcream;
-        cursor: default;
+        padding: 0.5em;
     }
 
     h3 {
