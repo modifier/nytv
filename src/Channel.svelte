@@ -56,6 +56,13 @@
 
     .channel:hover {
         background: #f4f4f4;
+        transition: background-color 0.2s;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .channel:hover {
+            background: #333333;
+        }
     }
 
     .channel__title {
@@ -72,5 +79,13 @@
     .channel--selected:hover {
         background-color: lightsteelblue;
         cursor: default;
+        transition: background-color 0.2s;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .channel--selected,
+        .channel--selected:hover {
+            background-color: steelblue;
+        }
     }
 </style>
