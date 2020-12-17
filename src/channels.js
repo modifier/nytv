@@ -22,6 +22,13 @@ export default [
         lang: 'KO'
     },
     {
+        timezoneName: 'Asia/Seoul',
+        title: 'Arirang TV',
+        countryCode: 'kr',
+        url: 'https://www.youtube.com/embed/tw1Bl8huNHg?autoplay=1',
+        lang: 'EN'
+    },
+    {
         timezoneName: 'Pacific/Fiji',
         title: 'Fiji TV',
         countryCode: 'fj',
@@ -96,13 +103,6 @@ export default [
         lang: 'EN'
     },
     {
-        timezoneName: 'Asia/Karachi',
-        title: 'ARY',
-        countryCode: 'pk',
-        url: 'https://live.arydigital.tv',
-        lang: 'EN'
-    },
-    {
         timezoneName: 'Asia/Tashkent',
         title: 'Uzreport TV',
         countryCode: 'uz',
@@ -173,6 +173,20 @@ export default [
         title: 'Gqama TV',
         countryCode: 'za',
         url: 'http://www.gqama.tv/live.php',
+        lang: 'EN'
+    },
+    {
+        timezoneName: 'Africa/Maputo',
+        title: 'ZNBC',
+        countryCode: 'zm',
+        url: 'https://www.znbc.co.zm/live-tv-stream/',
+        lang: 'EN'
+    },
+    {
+        timezoneName: 'Europe/Gibraltar',
+        title: 'GBC',
+        countryCode: 'gi',
+        url: 'https://www.gbc.gi/tv/watch-live',
         lang: 'EN'
     },
     {
