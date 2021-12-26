@@ -4,7 +4,7 @@ export default [
         title: 'TG4',
         countryCode: 'ie',
         url: 'https://www.tg4.ie/en/player/watch-live/home/',
-        video: 'https://csm-e-tg4ie.tls1.yospace.com/csm/live/195340990.m3u8',
+        video: 'https://csm-e-tg4ie.tls1Gqama .yospace.com/csm/live/195340990.m3u8',
         lang: 'EN'
     },
     {
@@ -16,9 +16,16 @@ export default [
     },
     {
         timezoneName: 'Asia/Seoul',
+        title: 'Central TV',
+        countryCode: 'kp',
+        url: 'https://kcnawatch.org/korea-central-tv-livestream/',
+        lang: 'KO'
+    },
+    {
+        timezoneName: 'Asia/Seoul',
         title: 'KBS',
         countryCode: 'kr',
-        url: 'https://www.youtube.com/embed/4gwqZYZ-OSw?autoplay=1',
+        url: 'https://www.youtube.com/embed/RBLlQUb5A0w?autoplay=1',
         lang: 'KO'
     },
     {
@@ -68,7 +75,7 @@ export default [
         timezoneName: 'Asia/Taipei',
         title: 'FTVN',
         countryCode: 'tw',
-        url: 'https://www.youtube.com/embed/XxJKnDLYZz4?autoplay=1',
+        url: 'https://www.youtube.com/embed/XGEmg3vhrzU?autoplay=1',
         lang: 'CN'
     },
     {
@@ -97,9 +104,9 @@ export default [
     },
     {
         timezoneName: 'Asia/Karachi',
-        title: 'Indus News',
+        title: 'ARY News',
         countryCode: 'pk',
-        url: 'https://www.youtube.com/embed/D9KHbHipoJ4?autoplay=1',
+        url: 'https://www.youtube.com/embed/38IEolI8f-w?autoplay=1',
         lang: 'EN'
     },
     {
@@ -112,9 +119,9 @@ export default [
     },
     {
         timezoneName: 'Asia/Dubai',
-        title: 'Al Arabiya',
-        countryCode: 'ae',
-        url: 'https://www.youtube.com/embed/_M7Kcs8el-Q?autoplay=1',
+        title: 'Oman TV',
+        countryCode: 'om',
+        url: 'http://part.gov.om/part/omanTVMobashir.html',
         lang: 'AR'
     },
     {
@@ -169,20 +176,6 @@ export default [
         lang: 'EN'
     },
     {
-        timezoneName: 'Africa/Johannesburg',
-        title: 'Gqama TV',
-        countryCode: 'za',
-        url: 'http://www.gqama.tv/live.php',
-        lang: 'EN'
-    },
-    {
-        timezoneName: 'Africa/Maputo',
-        title: 'ZNBC',
-        countryCode: 'zm',
-        url: 'https://www.znbc.co.zm/live-tv-stream/',
-        lang: 'EN'
-    },
-    {
         timezoneName: 'Europe/Gibraltar',
         title: 'GBC',
         countryCode: 'gi',
@@ -191,10 +184,10 @@ export default [
     },
     {
         timezoneName: 'Africa/Cairo',
-        title: 'Alghad TV',
+        title: 'Nile TV',
         countryCode: 'eg',
-        url: 'https://www.youtube.com/embed/s_lfbFjs_Yw?autoplay=1',
-        lang: 'AR'
+        redirect: 'https://www.maspero.eg/wps/portal/home/tv/channels/niletv/',
+        lang: 'EN'
     },
     {
         timezoneName: 'Europe/Stockholm',

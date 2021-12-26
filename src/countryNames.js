@@ -115,6 +115,7 @@ const isoCountries = {
     'KE' : 'Kenya',
     'KI' : 'Kiribati',
     'KR' : 'Korea',
+    'KP' : 'North Korea',
     'KW' : 'Kuwait',
     'KG' : 'Kyrgyzstan',
     'LA' : 'Lao People\'s Democratic Republic',
